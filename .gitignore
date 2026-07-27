@@ -1,0 +1,22 @@
+# Jupyter Notebook checkpoints and outputs
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+__notebook_profiler__
+.xpython_compiled_cache/
+
+# Python compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# IDEs and editors
+.vscode/
+.idea/
+.DS_Store
