@@ -1,0 +1,400 @@
+codigo,nome_coluna
+P0,id
+P1_a,Idade
+P1_a_1,Faixa idade
+P1_b,Genero
+P1_c,Cor/raca/etnia
+P1_d,PCD
+P1_e,experiencia_profissional_prejudicada
+P1_e_1,Não acredito que minha experiência profissional seja afetada
+P1_e_2,Experiencia prejudicada devido a minha Cor Raça Etnia
+P1_e_3,Experiencia prejudicada devido a minha identidade de gênero
+P1_e_4,Experiencia prejudicada devido ao fato de ser PCD
+P1_f,aspectos_prejudicados
+P1_f_1,Quantidade de oportunidades de emprego/vagas recebidas
+P1_f_2,Senioridade das vagas recebidas em relação à sua experiência
+P1_f_3,Aprovação em processos seletivos/entrevistas
+P1_f_4,Oportunidades de progressão de carreira
+P1_f_5,Velocidade de progressão de carreira
+P1_f_6,Nível de cobrança no trabalho/Stress no trabalho
+P1_f_7,Atenção dada diante das minhas opiniões e ideias
+P1_f_8,"Relação com outros membros da empresa, em momentos de trabalho"
+P1_f_9,"Relação com outros membros da empresa, em momentos de integração e outros momentos fora do trabalho"
+P1_g,vive_no_brasil
+P1_i,Estado onde mora
+P1_i_1,uf onde mora
+P1_i_2,Regiao onde mora
+P1_j,Mudou de Estado?
+P1_k,Regiao de origem
+P1_l,Nivel de Ensino
+P1_m,Área de Formação
+P2_a,Qual sua situação atual de trabalho?
+P2_b,Setor
+P2_c,Numero de Funcionarios
+P2_d,Gestor?
+P2_e,Cargo como Gestor
+P2_f,Cargo Atual
+P2_g,Nivel
+P2_h,Faixa salarial
+P2_i,Quanto tempo de experiência na área de dados você tem?
+P2_j,Quanto tempo de experiência na área de TI/Engenharia de Software você teve antes de começar a trabalhar na área de dados?
+P2_k,Você está satisfeito na sua empresa atual?
+P2_l,Qual o principal motivo da sua insatisfação com a empresa atual?
+P2_l_1,Falta de oportunidade de crescimento no emprego atual
+P2_l_2,Salário atual não corresponde ao mercado
+P2_l_3,Não tenho uma boa relação com meu líder/gestor
+P2_l_4,Gostaria de trabalhar em em outra área de atuação
+P2_l_5,Gostaria de receber mais benefícios
+P2_l_6,O clima de trabalho/ambiente não é bom
+P2_l_7,Falta de maturidade analítica na empresa
+P2_m,Você participou de entrevistas de emprego nos últimos 6 meses?
+P2_n,Você pretende mudar de emprego nos próximos 6 meses?
+P2_o,Quais os principais critérios que você leva em consideração no momento de decidir onde trabalhar?
+P2_o_1,Remuneração/Salário
+P2_o_2,Benefícios
+P2_o_3,Propósito do trabalho e da empresa
+P2_o_4,Flexibilidade de trabalho remoto
+P2_o_5,Ambiente e clima de trabalho
+P2_o_6,Oportunidade de aprendizado e trabalhar com referências na área
+P2_o_7,Plano de carreira e oportunidades de crescimento profissional
+P2_o_8,Maturidade da empresa em termos de tecnologia e dados
+P2_o_9,Qualidade dos gestores e líderes
+P2_o_10,Reputação que a empresa tem no mercado
+P2_q,Empresa que trabaha passou por layoff em 2023
+P2_r,Atualmente qual a sua forma de trabalho?
+P2_s,Qual a forma de trabalho ideal para você?
+P2_t,Caso sua empresa decida pelo modelo 100% presencial qual será sua atitude?
+P3_a,Qual o número aproximado de pessoas que atuam com dados na sua empresa hoje?
+P3_b,Quais desses papéis/cargos fazem parte do time (ou chapter) de dados da sua empresa?
+P3_b_1,Analytics Engineer
+P3_b_2,Engenharia de Dados/Data Engineer
+P3_b_3,Analista de Dados/Data Analyst
+P3_b_4,Cientista de Dados/Data Scientist
+P3_b_5,Database Administrator/DBA
+P3_b_6,Analista de Business Intelligence/BI
+P3_b_7,Arquiteto de Dados/Data Architect
+P3_b_8,Data Product Manager/DPM
+P3_b_9,Business Analyst
+P3_c,Quais dessas responsabilidades fazem parte da sua rotina atual de trabalho como gestor?
+P3_c_1,Pensar na visão de longo prazo de dados da empresa e fortalecimento da cultura analítica da companhia.
+P3_c_2,Organização de treinamentos e iniciativas com o objetivo de aumentar a maturidade analítica das áreas de negócios.
+P3_c_3,"Atração, seleção e contratação de talentos para o time de dados."
+P3_c_4,Decisão sobre contratação de ferramentas e tecnologias relacionadas a dados.
+P3_c_5,"Sou gestor da equipe responsável pela engenharia de dados e por manter o Data Lake da empresa como fonte única dos dados, garantindo a qualidade e confiabilidade da informação."
+P3_c_6,"Sou gestor da equipe responsável pela entrega de dados, estudos, relatórios e dashboards para as áreas de negócio da empresa."
+P3_c_7,Sou gestor da equipe responsável por iniciativas e projetos envolvendo Inteligência Artificial e Machine Learning.
+P3_c_8,"Apesar de ser gestor ainda atuo na parte técnica, construindo soluções/análises/modelos etc."
+P3_c_9,"Gestão de projetos de dados, cuidando das etapas, equipes envolvidas, atingimento dos objetivos etc."
+P3_c_10,"Gestão de produtos de dados, cuidando da visão dos produtos, backlog, feedback de usuários etc."
+P3_c_11,"Gestão de pessoas, apoio no desenvolvimento das pessoas, evolução de carreira"
+P3_d,Quais são os 3 maiores desafios que você tem como gestor no atual momento?
+P3_d_1,a Contratar novos talentos.
+P3_d_2,b Reter talentos.
+P3_d_3,c Convencer a empresa a aumentar os investimentos na área de dados.
+P3_d_4,d Gestão de equipes no ambiente remoto.
+P3_d_5,e Gestão de projetos envolvendo áreas multidisciplinares da empresa.
+P3_d_6,f Organizar as informações e garantir a qualidade e confiabilidade.
+P3_d_7,g Conseguir processar e armazenar um alto volume de dados.
+P3_d_8,h Conseguir gerar valor para as áreas de negócios através de estudos e experimentos.
+P3_d_9,i Desenvolver e manter modelos Machine Learning em produção.
+P3_d_10,j Gerenciar a expectativa das áreas de negócio em relação as entregas das equipes de dados.
+P3_d_11,"k Garantir a manutenção dos projetos e modelos em produção, em meio ao crescimento da empresa."
+P3_d_12,Conseguir levar inovação para a empresa através dos dados.
+P3_d_13,Garantir retorno do investimento (ROI) em projetos de dados.
+P3_d_14,Dividir o tempo entre entregas técnicas e gestão.
+P3_e,AI Generativa é uma prioridade em sua empresa?
+P3_f,Tipos de uso de AI Generativa e LLMs na empresa
+P3_f_1,Colaboradores usando AI generativa de forma independente e descentralizada__P3_f_1
+P3_f_2,Direcionamento centralizado do uso de AI generativa__P3_f_2
+P3_f_3,Desenvolvedores utilizando Copilots__P3_f_3
+P3_f_4,AI Generativa e LLMs para melhorar produtos externos
+P3_f_5,AI Generativa e LLMs para melhorar produtos internos para os colaboradores__P3_f_5
+P3_f_6,IA Generativa e LLMs como principal frente do negócio__P3_f_6
+P3_f_7,IA Generativa e LLMs não é prioridade__P3_f_7
+P3_f_8,Não sei opinar sobre o uso de IA Generativa e LLMs na empresa__P3_f_8
+P3_g,Motivos que levam a empresa a não usar AI Genrativa e LLMs
+P3_g_1,Falta de compreensão dos casos de uso
+P3_g_2,Falta de confiabilidade das saídas (alucinação dos modelos)
+P3_g_3,Incerteza em relação a regulamentação
+P3_g_4,Preocupações com segurança e privacidade de dados
+P3_g_5,Retorno sobre investimento (ROI) não comprovado de IA Generativa
+P3_g_6,Dados da empresa não estão prontos para uso de IA Generativa
+P3_g_7,Falta de expertise ou falta de recursos
+P3_g_8,Alta direção da empresa não vê valor ou não vê como prioridade
+P3_g_9,Preocupações com propriedade intelectual
+P4_a,"Mesmo que esse não seja seu cargo formal, você considera que sua atuação no dia a dia, reflete alguma das opções listadas abaixo?"
+P4_a_1,Atuacao
+P4_b,Quais das fontes de dados listadas você já analisou ou processou no trabalho?
+P4_b_1,Dados relacionais (estruturados em bancos SQL)__P4_b_1
+P4_b_2,Dados armazenados em bancos NoSQL__P4_b_2
+P4_b_3,Imagens__P4_b_3
+P4_b_4,Textos/Documentos__P4_b_4
+P4_b_5,Vídeos__P4_b_5
+P4_b_6,Áudios__P4_b_6
+P4_b_7,Planilhas__P4_b_7
+P4_b_8,Dados georeferenciados__P4_b_8
+P4_c,"Entre as fontes de dados listadas, quais você utiliza na maior parte do tempo?"
+P4_c_1,Dados relacionais (estruturados em bancos SQL)__P4_c_1
+P4_c_2,Dados armazenados em bancos NoSQL__P4_c_2
+P4_c_3,Imagens__P4_c_3
+P4_c_4,Textos/Documentos__P4_c_4
+P4_c_5,Vídeos__P4_c_5
+P4_c_6,Áudios__P4_c_6
+P4_c_7,Planilhas__P4_c_7
+P4_c_8,Dados georeferenciados__P4_c_8
+P4_d,Quais das linguagens listadas abaixo você utiliza no trabalho?
+P4_d_1,SQL
+P4_d_2,R 
+P4_d_3,Python
+P4_d_4,C/C++/C#
+P4_d_5,.NET
+P4_d_6,Java
+P4_d_7,Julia
+P4_d_8,SAS/Stata
+P4_d_9,Visual Basic/VBA
+P4_d_10,Scala
+P4_d_11,Matlab
+P4_d_12,Rust
+P4_d_13,PHP
+P4_d_14,JavaScript
+P4_d_15,Não utilizo nenhuma linguagem
+P4_e,"Entre as linguagens listadas abaixo, qual é a que você mais utiliza no trabalho?"
+P4_f,"Entre as linguagens listadas abaixo, qual é a sua preferida?"
+P4_g,Quais dos bancos de dados/fontes de dados listados abaixo você utiliza no trabalho?
+P4_g_1,MySQL
+P4_g_2,Oracle
+P4_g_3,SQL SERVER
+P4_g_4,Amazon Aurora ou RDS
+P4_g_5,DynamoDB
+P4_g_6,CoachDB
+P4_g_7,Cassandra
+P4_g_8,MongoDB
+P4_g_9,MariaDB
+P4_g_10,Datomic
+P4_g_11,S3
+P4_g_12,PostgreSQL
+P4_g_13,ElasticSearch
+P4_g_14,DB2
+P4_g_15,Microsoft Access
+P4_g_16,SQLite
+P4_g_17,Sybase
+P4_g_18,Firebase
+P4_g_19,Vertica
+P4_g_20,Redis
+P4_g_21,Neo4J
+P4_g_22,Google BigQuery
+P4_g_23,Google Firestore
+P4_g_24,Amazon Redshift
+P4_g_25,Amazon Athena
+P4_g_26,Snowflake
+P4_g_27,Databricks__P4_g_27
+P4_g_28,HBase
+P4_g_29,Presto
+P4_g_30,Splunk
+P4_g_31,SAP HANA
+P4_g_32,Hive
+P4_g_33,Firebird
+P4_h,"Dentre as opções listadas, qual sua Cloud preferida?"
+P4_h_1,Azure (Microsoft)
+P4_h_2,Amazon Web Services (AWS)
+P4_h_3,Google Cloud (GCP)
+P4_h_4,Oracle Cloud
+P4_h_5,IBM
+P4_h_6,Servidores On Premise/Não utilizamos Cloud
+P4_h_7,Cloud Própria
+P4_i,Cloud preferida
+P4_j,Ferramenta de BI utilizada no dia a dia
+P4_j_1,Microsoft PowerBI
+P4_j_2,Qlik View/Qlik Sense
+P4_j_3,Tableau
+P4_j_4,Metabase
+P4_j_5,Superset
+P4_j_6,Redash
+P4_j_7,Looker
+P4_j_8,Looker Studio(Google Data Studio)
+P4_j_9,Amazon Quicksight
+P4_j_10,Mode
+P4_j_11,Alteryx__P4_j_11
+P4_j_12,MicroStrategy
+P4_j_13,IBM Analytics/Cognos
+P4_j_14,SAP Business Objects/SAP Analytics
+P4_j_15,Oracle Business Intelligence
+P4_j_16,Salesforce/Einstein Analytics
+P4_j_17,Birst
+P4_j_18,SAS Visual Analytics
+P4_j_19,Grafana
+P4_j_20,TIBCO Spotfire
+P4_j_21,Pentaho__P4_j_21
+P4_j_22,Fazemos todas as análises utilizando apenas Excel ou planilhas do google
+P4_j_23,Não utilizo nenhuma ferramenta de BI no trabalho
+P4_k,Qual sua ferramenta de BI preferida?
+P4_l,Qual o tipo de uso de AI Generativa e LLMs na empresa
+P4_l_1,Colaboradores usando AI generativa de forma independente e descentralizada__P4_l_1
+P4_l_2,Direcionamento centralizado do uso de AI generativa__P4_l_2
+P4_l_3,Desenvolvedores utilizando Copilots__P4_l_3
+P4_l_4,AI Generativa e LLMs para melhorar produtos externos para os clientes finais
+P4_l_5,AI Generativa e LLMs para melhorar produtos internos para os colaboradores__P4_l_5
+P4_l_6,IA Generativa e LLMs como principal frente do negócio__P4_l_6
+P4_l_7,IA Generativa e LLMs não é prioridade__P4_l_7
+P4_l_8,Não sei opinar sobre o uso de IA Generativa e LLMs na empresa__P4_l_8
+P4_m,Utiliza ChatGPT ou LLMs no trabalho?
+P4_m_1,Não uso soluções de AI Generativa com foco em produtividade
+P4_m_2,Uso soluções gratuitas de AI Generativa com foco em produtividade
+P4_m_3,Uso e pago pelas soluções de AI Generativa com foco em produtividade
+P4_m_4,A empresa que trabalho paga pelas soluções de AI Generativa com foco em produtividade
+P4_m_5,Uso soluções do tipo Copilot
+P5_a,Qual seu objetivo na área de dados?
+P5_b,Qual oportunidade você está buscando?
+P5_c,Há quanto tempo você busca uma oportunidade na área de dados?
+P5_d,Como tem sido a busca por um emprego na área de dados?
+P6_a,Quais das opções abaixo fazem parte da sua rotina no trabalho atual como engenheiro de dados?
+P6_a_1,"Desenvolvo pipelines de dados utilizando linguagens de programação como Python, Scala, Java etc."
+P6_a_2,"Realizo construções de ETL's em ferramentas como Pentaho, Talend, Dataflow etc."
+P6_a_3,Crio consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.__P6_a_3
+P6_a_4,"Atuo na integração de diferentes fontes de dados através de plataformas proprietárias como Stitch Data, Fivetran etc."
+P6_a_5,"Modelo soluções de arquitetura de dados, criando componentes de ingestão de dados, transformação e recuperação da informação."
+P6_a_6,Desenvolvo/cuido da manutenção de repositórios de dados baseados em streaming de eventos como Data Lakes e Data Lakehouses.
+P6_a_7,"Atuo na modelagem dos dados, com o objetivo de criar conjuntos de dados como Data Warehouses, Data Marts etc."
+P6_a_8,"Cuido da qualidade dos dados, metadados e dicionário de dados."
+P6_a_9,Nenhuma das opções listadas refletem meu dia a dia.__P6_a_9
+P6_b,Quais as ferramentas/tecnologias de ETL que você utiliza no trabalho como Data Engineer?
+P6_b_1,Scripts Python__P6_b_1
+P6_b_2,SQL & Stored Procedures__P6_b_2
+P6_b_3,Apache Airflow__P6_b_3
+P6_b_4,Apache NiFi__P6_b_4
+P6_b_5,Luigi__P6_b_5
+P6_b_6,AWS Glue__P6_b_6
+P6_b_7,Talend__P6_b_7
+P6_b_8,Pentaho__P6_b_8
+P6_b_9,Alteryx__P6_b_9
+P6_b_10,Stitch__P6_b_10
+P6_b_11,Fivetran__P6_b_11
+P6_b_12,Google Dataflow__P6_b_12
+P6_b_13,Oracle Data Integrator__P6_b_13
+P6_b_14,IBM DataStage__P6_b_14
+P6_b_15,SAP BW ETL__P6_b_15
+P6_b_16,SQL Server Integration Services (SSIS)__P6_b_16
+P6_b_17,SAS Data Integration__P6_b_17
+P6_b_18,Qlik Sense__P6_b_18
+P6_b_19,Knime__P6_b_19
+P6_b_20,Databricks__P6_b_20
+P6_b_21,Não utilizo ferramentas de ETL__P6_b_21
+P6_c,Sua organização possui um Data Lake?
+P6_d,Qual tecnologia utilizada como plataforma do Data Lake?
+P6_e,Sua organização possui um Data Warehouse?
+P6_f,Qual tecnologia utilizada como plataforma do Data Warehouse?
+P6_g,"Quais as ferramentas de gestão de Qualidade de dados, Metadados e catálogo de dados você utiliza no trabalho?"
+P6_h,Em qual das opções abaixo você gasta a maior parte do seu tempo?
+P6_h_1,"Desenvolvendo pipelines de dados utilizando linguagens de programação como Python, Scala, Java etc."
+P6_h_2,"Realizando construções de ETL's em ferramentas como Pentaho, Talend, Dataflow etc."
+P6_h_3,Criando consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.__P6_h_3
+P6_h_4,"Atuando na integração de diferentes fontes de dados através de plataformas proprietárias como Stitch Data, Fivetran etc."
+P6_h_5,"Modelando soluções de arquitetura de dados, criando componentes de ingestão de dados, transformação e recuperação da informação."
+P6_h_6,Desenvolvendo/cuidando da manutenção de repositórios de dados baseados em streaming de eventos como Data Lakes e Data Lakehouses.
+P6_h_7,"Atuando na modelagem dos dados, com o objetivo de criar conjuntos de dados como Data Warehouses, Data Marts etc."
+P6_h_8,"Cuidando da qualidade dos dados, metadados e dicionário de dados."
+P6_h_9,Nenhuma das opções listadas refletem meu dia a dia.__P6_h_9
+P7_1,Quais das opções abaixo fazem parte da sua rotina no trabalho atual com análise de dados?
+P7_a_1,"Processo e analiso dados utilizando linguagens de programação como Python, R etc."
+P7_a_2,"Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc."
+P7_a_3,Crio consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.__P7_a_3
+P7_a_4,Utilizo API's para extrair dados e complementar minhas análises.
+P7_a_5,"Realizo experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc."
+P7_a_6,"Desenvolvo/cuido da manutenção de ETL's utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc."
+P7_a_7,"Atuo na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc."
+P7_a_8,Desenvolvo/cuido da manutenção de planilhas para atender as áreas de negócio.
+P7_a_9,"Utilizo ferramentas avançadas de estatística como SASS, PSS, Stata etc"
+P7_a_10,Nenhuma das opções listadas refletem meu dia a dia.__P7_a_10
+P7_b,Quais as ferramentas/tecnologias de ETL que você utiliza no trabalho como Data Analyst?
+P7_b_1,Scripts Python__P7_b_1
+P7_b_2,SQL & Stored Procedures__P7_b_2
+P7_b_3,Apache Airflow__P7_b_3
+P7_b_4,Apache NiFi__P7_b_4
+P7_b_5,Luigi__P7_b_5
+P7_b_6,AWS Glue__P7_b_6
+P7_b_7,Talend__P7_b_7
+P7_b_8,Pentaho__P7_b_8
+P7_b_9,Alteryx__P7_b_9
+P7_b_10,Stitch__P7_b_10
+P7_b_11,Fivetran__P7_b_11
+P7_b_12,Google Dataflow__P7_b_12
+P7_b_13,Oracle Data Integrator__P7_b_13
+P7_b_14,IBM DataStage__P7_b_14
+P7_b_15,SAP BW ETL__P7_b_15
+P7_b_16,SQL Server Integration Services (SSIS)__P7_b_16
+P7_b_17,SAS Data Integration__P7_b_17
+P7_b_18,Qlik Sense__P7_b_18
+P7_b_19,Knime__P7_b_19
+P7_b_20,Databricks__P7_b_20
+P7_b_21,Não utilizo ferramentas de ETL__P7_b_21
+P7_c,Sua empresa utiliza alguma das ferramentas listadas para dar mais autonomia em análise de dados para as áreas de negócio?
+P7_c_1,"Ferramentas de AutoML como H2O.ai, Data Robot, BigML etc."
+P7_c_2,"""""Point and Click"""" Analytics como Alteryx, Knime, Rapidminer etc."
+P7_c_3,"Product metricts & Insights como Mixpanel, Amplitude, Adobe Analytics."
+P7_c_4,Ferramentas de análise dentro de ferramentas de CRM como Salesforce Einstein Anaytics ou Zendesk dashboards.
+P7_c_5,Minha empresa não utiliza essas ferramentas.
+P7_c_6,Não sei informar.
+P7_d,Em qual das opções abaixo você gasta a maior parte do seu tempo de trabalho?
+P7_d_1,"Processando e analisando dados utilizando linguagens de programação como Python, R etc."
+P7_d_2,"Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik etc."
+P7_d_3,Criando consultas através da linguagem SQL para exportar informações e compartilhar com as áreas de negócio.__P7_d_3
+P7_d_4,Utilizando API's para extrair dados e complementar minhas análises.
+P7_d_5,"Realizando experimentos e estudos utilizando metodologias estatísticas como teste de hipótese, modelos de regressão etc."
+P7_d_6,"Desenvolvendo/cuidando da manutenção de ETL's utilizando tecnologias como Talend, Pentaho, Airflow, Dataflow etc."
+P7_d_7,"Atuando na modelagem dos dados, com o objetivo de criar conjuntos de dados, Data Warehouses, Data Marts etc."
+P7_d_8,Desenvolvendo/cuidando da manutenção de planilhas do Excel ou Google Sheets para atender as áreas de negócio.
+P7_d_9,"Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises.__P7_d_9"
+P7_d_10,Nenhuma das opções listadas refletem meu dia a dia.__P7_d_10
+P8_a,Quais das opções abaixo fazem parte da sua rotina no trabalho atual com ciência de dados?
+P8_a_1,"Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, forecasts, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.__P8_a_1"
+P8_a_2,Sou responsável pela coleta e limpeza dos dados que uso para análise e modelagem.
+P8_a_3,"Sou responsável por entrar em contato com os times de negócio para definição do problema, identificar a solução e apresentação de resultados."
+P8_a_4,Desenvolvo modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).
+P8_a_5,"Sou responsável por colocar modelos em produção, criar os pipelines de dados, APIs de consumo e monitoramento."
+P8_a_6,"Cuido da manutenção de modelos de Machine Learning já em produção, atuando no monitoramento, ajustes e refatoração quando necessário."
+P8_a_7,"Realizo construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc"
+P8_a_8,"Utilizo ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises estatísticas e ajustar modelos."
+P8_a_9,"Crio e dou manutenção em ETLs, DAGs e automações de pipelines de dados."
+P8_a_10,Crio e gerencio soluções de Feature Store e cultura de MLOps.
+P8_a_11,"Sou responsável por criar e manter a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)"
+P8_a_12,Treino e aplico LLM's para solucionar problemas de negócio.
+P8_b,Quais as técnicas e métodos listados abaixo você costuma utilizar no trabalho?
+P8_b_1,"Utilizo modelos de regressão (linear, logística, GLM)"
+P8_b_2,Utilizo redes neurais ou modelos baseados em árvore para criar modelos de classificação
+P8_b_3,Desenvolvo sistemas de recomendação (RecSys)
+P8_b_4,Utilizo métodos estatísticos Bayesianos para analisar dados
+P8_b_5,Utilizo técnicas de NLP (Natural Language Processing) para análisar dados não-estruturados
+P8_b_6,"Utilizo métodos estatísticos clássicos (Testes de hipótese, análise multivariada, sobrevivência, dados longitudinais, inferência estatistica) para analisar dados"
+P8_b_7,Utilizo cadeias de Markov ou HMM's para realizar análises de dados
+P8_b_8,"Desenvolvo técnicas de Clusterização (K-means, Spectral, DBScan etc)"
+P8_b_9,Realizo previsões através de modelos de Séries Temporais (Time Series)
+P8_b_10,Utilizo modelos de Reinforcement Learning (aprendizado por reforço)
+P8_b_11,Utilizo modelos de Machine Learning para detecção de fraude
+P8_b_12,Utilizo métodos de Visão Computacional
+P8_b_13,Utilizo modelos de Detecção de Churn
+P8_b_14,Utilizo LLM's para solucionar problemas de negócio
+P8_3,Quais dessas tecnologias fazem parte do seu dia a dia como cientista de dados?
+P8_c_1,"Ferramentas de BI (PowerBI, Looker, Tableau, Qlik etc)"
+P8_c_2,"Planilhas (Excel, Google Sheets etc)"
+P8_c_3,"Ambientes de desenvolvimento local (R-studio, JupyterLab, Anaconda)"
+P8_c_4,"Ambientes de desenvolvimento na nuvem (Google Colab, AWS Sagemaker, Kaggle Notebooks etc)"
+P8_c_5,"Ferramentas de AutoML (Datarobot, H2O, Auto-Keras etc)"
+P8_c_6,"Ferramentas de ETL (Apache Airflow, NiFi, Stitch, Fivetran, Pentaho etc)"
+P8_c_7,"Plataformas de Machine Learning (TensorFlow, Azure Machine Learning, Kubeflow etc)"
+P8_c_8,"Feature Store (Feast, Hopsworks, AWS Feature Store, Databricks Feature Store etc)"
+P8_c_9,"Sistemas de controle de versão (Github, DVC, Neptune, Gitlab etc)"
+P8_c_10,"Plataformas de Data Apps (Streamlit, Shiny, Plotly Dash etc)"
+P8_c_11,"Ferramentas de estatística avançada como SPSS, SAS, etc."
+P8_d,Em qual das opções abaixo você gasta a maior parte do seu tempo no trabalho?
+P8_d_1,"Estudos Ad-hoc com o objetivo de confirmar hipóteses, realizar modelos preditivos, forecasts, análise de cluster para resolver problemas pontuais e responder perguntas das áreas de negócio.__P8_d_1"
+P8_d_2,Coletando e limpando os dados que uso para análise e modelagem.
+P8_d_3,"Entrando em contato com os times de negócio para definição do problema, identificar a solução e apresentação de resultados."
+P8_d_4,Desenvolvendo modelos de Machine Learning com o objetivo de colocar em produção em sistemas (produtos de dados).
+P8_d_5,"Colocando modelos em produção, criando os pipelines de dados, APIs de consumo e monitoramento."
+P8_d_6,"Cuidando da manutenção de modelos de Machine Learning já em produção, atuando no monitoramento, ajustes e refatoração quando necessário."
+P8_d_7,"Realizando construções de dashboards em ferramentas de BI como PowerBI, Tableau, Looker, Qlik, etc."
+P8_d_8,"Utilizando ferramentas avançadas de estatística como SAS, SPSS, Stata etc, para realizar análises.__P8_d_8"
+P8_d_9,"Criando e dando manutenção em ETLs, DAGs e automações de pipelines de dados."
+P8_d_10,Criando e gerenciando soluções de Feature Store e cultura de MLOps.
+P8_d_11,"Criando e mantendo a infra que meus modelos e soluções rodam (clusters, servidores, API, containers, etc.)"
+P8_d_12,Treinando e aplicando LLM's para solucionar problemas de negócio.
