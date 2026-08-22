@@ -20,3 +20,7 @@ ENV/
 .vscode/
 .idea/
 .DS_Store
+
+*.txt
+
+diagrams/
