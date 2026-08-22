@@ -1,5 +1,9 @@
-pyspark
+pyspark==3.5.1
 pandas
 matplotlib
 seaborn
 jupyterlab
+jupyter
+ipykernel
+awswrangler
+boto3

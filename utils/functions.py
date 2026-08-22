@@ -16,7 +16,7 @@ gold_2023_2024) vinha redefinindo localmente. Import sugerido:
 import re
 import unicodedata
 
-from pyspark.sql import functions as F
+from pyspark.sql import DataFrame, functions as F
 
 
 # --------------------------------------------------------------------------
@@ -119,3 +119,76 @@ def padronizar_bloco(df, nome_bloco, codigo_bloco, mapa_codigo_para_nome, condic
             resultado = F.when(condicao_escopo == False, None).otherwise(resultado)  # noqa: E712
         df = df.withColumn(coluna, resultado)
     return df
+
+
+# --------------------------------------------------------------------------
+# Edição 2024: funções próprias do pipeline do Maycon
+# --------------------------------------------------------------------------
+
+def ler_csv_bruto(spark, path: str) -> DataFrame:
+    """Lê o CSV bruto da pesquisa State of Data.
+
+    multiLine + escape/quote são obrigatórios: respostas de texto livre
+    da pesquisa têm quebra de linha e vírgula dentro do próprio campo,
+    e sem essas opções o Spark desalinha colunas silenciosamente.
+    """
+    return (
+        spark.read
+        .option("header", "true")
+        .option("inferSchema", "true")
+        .option("multiLine", "true")
+        .option("quote", '"')
+        .option("escape", '"')
+        .option("encoding", "UTF-8")
+        .csv(path)
+    )
+
+
+def renomear_e_filtrar_colunas(df: DataFrame, rename_colunas: dict) -> DataFrame:
+    """Seleciona só as colunas relevantes (presentes no dicionário) e
+    renomeia para o nome tratado. Ignora colunas do dicionário que não
+    existirem no DataFrame (evita quebrar se o schema mudar)."""
+    colunas_existentes = set(df.columns)
+    selects = [
+        F.col(f"`{original}`").alias(tratada)
+        for original, tratada in rename_colunas.items()
+        if original in colunas_existentes
+    ]
+    return df.select(*selects)
+
+
+def colunas_multipla_escolha_para_boolean(df: DataFrame, colunas: list) -> DataFrame:
+    """Converte colunas de múltipla escolha (0.0/1.0/NaN) para boolean.
+
+    NaN é preservado como null -- significa que a pergunta nunca apareceu
+    pra essa pessoa (lógica de bloco condicional), não que o dado "sumiu".
+    """
+    for c in colunas:
+        if c in df.columns:
+            df = df.withColumn(c, F.col(c).cast("boolean"))
+    return df
+
+
+def adicionar_coluna_edicao(df: DataFrame, edicao: str) -> DataFrame:
+    """Adiciona a coluna `edicao` (ex: '2024_2025'), necessária pra
+    depois dar UNION nas 3 silvers sem perder de qual pesquisa veio
+    cada linha."""
+    return df.withColumn("edicao", F.lit(edicao))
+
+
+def relatorio_nulos(df: DataFrame) -> DataFrame:
+    """Retorna um DataFrame com a contagem e o percentual de nulos por
+    coluna -- útil pra conferir rapidamente se o percentual de nulo de
+    uma coluna bate com o esperado pela regra de nulo documentada."""
+    total = df.count()
+    exprs = [
+        F.sum(F.col(c).isNull().cast("int")).alias(c) for c in df.columns
+    ]
+    contagem = df.select(*exprs).first().asDict()
+    linhas = [
+        (coluna, qtd, round(100.0 * qtd / total, 1))
+        for coluna, qtd in contagem.items()
+    ]
+    return df.sparkSession.createDataFrame(
+        linhas, ["coluna", "qtd_nulos", "pct_nulos"]
+    ).orderBy(F.desc("pct_nulos"))
