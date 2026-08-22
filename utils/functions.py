@@ -42,6 +42,27 @@ def extrair_codigo_e_descricao(nome_coluna_bruto):
     return codigo, descricao
 
 
+# Edição 2025: o cabeçalho vem como "codigo_descricao" (ou "codigo descricao"),
+# com código numérico pontuado (ex: "1.a_idade", "8.d.11_Criando e mantendo...").
+# Formato diferente do de tupla de 2023, por isso um parser próprio. O separador
+# entre código e descrição é inconsistente na exportação de 2025: a maioria usa
+# "_", mas algumas colunas de opção de bloco usam espaço.
+PADRAO_2025 = re.compile(r"^(\d+\.[a-z](?:\.\d+)?)[_ ](.*)$", re.DOTALL)
+
+
+def extrair_codigo_e_descricao_2025(nome_coluna_bruto):
+    """Separa (codigo, descricao) do nome bruto no formato 'codigo_descricao'
+    ou 'codigo descricao' usado na edição 2025.
+
+    Retorna (codigo, descricao). Se não casar com o padrão, retorna
+    (None, nome_coluna_bruto).
+    """
+    m = PADRAO_2025.match(nome_coluna_bruto)
+    if not m:
+        return None, nome_coluna_bruto
+    return m.group(1).strip(), m.group(2).strip()
+
+
 # --------------------------------------------------------------------------
 # Silver/Gold: referenciar colunas com segurança e gerar nomes de variável
 # --------------------------------------------------------------------------
