@@ -1,8 +1,8 @@
 # Evidências de execução na AWS
 
 Os notebooks em `notebooks/` rodam localmente por padrão (mais simples pra
-desenvolver e depurar). A execução real na nuvem — que o desafio pede
-explicitamente — foi feita a partir dos scripts em [`glue_jobs/`](../glue_jobs/),
+desenvolver e depurar). A execução real na nuvem, que o desafio pede
+explicitamente, foi feita a partir dos scripts em [`glue_jobs/`](../glue_jobs/),
 publicados como **AWS Glue Jobs**, lendo/escrevendo direto no **Amazon S3**,
 catalogados no **Glue Data Catalog** e consultados via **Amazon Athena**.
 
@@ -19,33 +19,39 @@ tela, feita no momento de cada execução — não por link ao vivo.
 
 ### Bronze
 
-| Edição | Status | Duração | Custo estimado |
-|---|---|---|---|
-| 2023 | <!-- Succeeded / Failed --> | <!-- ex: 2min23s --> | <!-- ex: $0.03 --> |
-| 2024 | | | |
-| 2025 | | | |
+| Edição | Status | Data | Duração |
+| :--- | :--- | :--- | :--- |
+| **bronze-2023-teste** | Succeeded | 08/10/2026 | 2m 23s |
+| **bronze-2024-teste** | Succeeded | 23/08/2026 | 1m 42s |
+| **bronze-2025-2026-teste** | Succeeded | 22/08/2026 | 2m 17s |
 
-`![Glue Job Bronze - execução](./screenshots/glue_bronze.png)`
+![Glue Job Bronze - execução](./screenshots/bronze_2023.png)
+![Glue Job Bronze - execução](./screenshots/bronze_2024.png)
+![Glue Job Bronze - execução](./screenshots/bronze_2025.png)
 
 ### Silver
 
-| Edição | Status | Duração | Custo estimado |
-|---|---|---|---|
-| 2023 | | | |
-| 2024 | | | |
-| 2025 | | | |
+| Edição | Status | Data | Duração |
+| :--- | :--- | :--- | :--- |
+| **silver-2023-teste** | Succeeded | 08/10/2026 | 2m |
+| **silver-2024-teste** | Succeeded | 23/08/2026 | 2m 26s |
+| **silver-2025-final** | Succeeded | 22/08/2026 | 2m 50s |
 
-`![Glue Job Silver - execução](./screenshots/glue_silver.png)`
+![Glue Job Silver - execução](./screenshots/silver_2023.png)
+![Glue Job Silver - execução](./screenshots/silver_2024.png)
+![Glue Job Silver - execução](./screenshots/silver_2025.png)
 
 ### Gold
 
-| Edição | Status | Duração | Custo estimado |
-|---|---|---|---|
-| 2023 | | | |
-| 2024 | | | |
-| 2025 | | | |
+| Edição | Status | Data | Duração |
+| :--- | :--- | :--- | :--- |
+| **gold-2023-teste** | Succeeded | 08/10/2026 | 2m 58s |
+| **gold-2024-teste** | Succeeded | 23/08/2026 | 3m 10s |
+| **gold-2025-final** | Succeeded | 22/08/2026 | 3m 10s |
 
-`![Glue Job Gold - execução](./screenshots/glue_gold.png)`
+![Glue Job Gold - execução](./screenshots/gold_2023.png)
+![Glue Job Gold - execução](./screenshots/gold_2024.png)
+![Glue Job Gold - execução](./screenshots/gold_2025.png)
 
 ---
 
@@ -54,11 +60,15 @@ tela, feita no momento de cada execução — não por link ao vivo.
 <!-- Print do console do S3 mostrando a árvore de pastas com as partições
      ano_pesquisa=2023 / 2024 / 2025 populadas em cada camada. -->
 
-`![S3 - Bronze particionada](./screenshots/s3_bronze.png)`
+![S3 - Raiz do bucket](./screenshots/s3_bucket_root.png)
 
-`![S3 - Silver particionada](./screenshots/s3_silver.png)`
+![S3 - Data Folder](./screenshots/s3_data_folder.png)
 
-`![S3 - Gold, 7 pastas de pergunta](./screenshots/s3_gold.png)`
+![S3 - Bronze Partitioned](./screenshots/s3_bronze_partitioned.png)
+
+![S3 - Silver Partitioned](./screenshots/s3_silver_partitioned.png)
+
+![S3 - Gold, 7 pastas de pergunta](./screenshots/s3_gold_questions.png)
 
 ---
 
@@ -67,7 +77,11 @@ tela, feita no momento de cada execução — não por link ao vivo.
 <!-- Print da lista de tabelas catalogadas (crawler ou catalogação manual),
      mostrando o schema reconhecido a partir do Parquet da Gold. -->
 
-`![Glue Data Catalog - tabelas](./screenshots/glue_catalog.png)`
+![Glue Data Catalog - tabelas](./screenshots/glue_catalog_gold_p1.png)
+
+![Glue Data Catalog - tabelas](./screenshots/glue_catalog_gold_p2.png)
+
+![Glue Data Catalog - tabelas](./screenshots/glue_catalog_gold_p3.png)
 
 ---
 
@@ -77,7 +91,8 @@ tela, feita no momento de cada execução — não por link ao vivo.
      resultado visível. Se possível, usar uma das queries comparativas
      entre as 3 edições (ex: SELECT ano_pesquisa, ... GROUP BY ano_pesquisa). -->
 
-`![Athena - query comparativa entre edições](./screenshots/athena_query.png)`
+![Athena - query comparativa entre edições](./screenshots/athena_query_editor.png)
+![Athena - query comparativa entre edições](./screenshots/athena_query_results.png)
 
 ---
 
@@ -86,7 +101,9 @@ tela, feita no momento de cada execução — não por link ao vivo.
 <!-- Print do dashboard conectado via Athena, mostrando os dados das
      3 edições. -->
 
-`![Power BI - dashboard conectado ao Athena](./screenshots/powerbi_dashboard.png)`
+![Power BI - dashboard conectado ao Athena](./screenshots/powerbi_athena_connection.png)
+
+![Power BI - dashboard conectado ao Athena](./screenshots/powerbi_dashboard.png)
 
 ---
 
@@ -96,4 +113,4 @@ tela, feita no momento de cada execução — não por link ao vivo.
   para as 3 edições, com overwrite dinâmico por partição `ano_pesquisa`.
 - Dado catalogado no **Glue Data Catalog** e consultável via **Amazon Athena**.
 - Consumo final em **Power BI**, conectado via Athena.
-- Custo total medido ao longo dos testes: <!-- ex: menos de $1 -->.
+
