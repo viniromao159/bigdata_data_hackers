@@ -32,8 +32,9 @@ raw (CSV bruto por edição)
                categorias de resposta corrigidas)
       → Gold (tabelas de resposta às 7 perguntas de negócio do desafio,
                uma pasta por pergunta)
-        → 04_visualizacao.ipynb (lê a Gold já unificada dos 3 anos,
-                                   gera os gráficos finais)
+        → catalogado via Glue Crawler, consumido via Athena/Power BI
+           (as 3 edições já unificadas por ano_pesquisa — ver
+           `docs/roteiro-pipeline-aws-glue.md`)
 ```
 
 Cada camada é escrita no **mesmo caminho**, particionada por `ano_pesquisa`,
@@ -72,16 +73,30 @@ data/
         (cada tabela particionada por ano_pesquisa)
 
 notebooks/
-├── 01_bronze/      (bronze_<edição>.ipynb, um por integrante)
-├── 02_silver/      (silver_<edição>.ipynb, um por integrante)
-├── 03_gold/        (gold_<edição>.ipynb, um por integrante)
-└── 04_visualizacao.ipynb   (lê a Gold unificada, gera os gráficos finais)
+├── 01_bronze/      (bronze_<edição atual>_<edição seguinte>.ipynb, ex: bronze_2024_2025.ipynb — um por integrante)
+├── 02_silver/      (silver_<edição atual>_<edição seguinte>.ipynb — um por integrante)
+└── 03_gold/        (gold_<edição atual>_<edição seguinte>.ipynb — um por integrante)
+
+glue_jobs/
+    (versão .py de cada notebook, ajustada pra rodar como job no AWS Glue —
+    bootstrap de `utils/` removido/inlinado, caminhos locais trocados por
+    `s3://`, e escrita de arquivo pequeno via `boto3` em vez de disco local.
+    Um arquivo por camada × edição, 9 no total.)
 
 sql/
 └── perguntas.sql   (as 7 perguntas de negócio + consultas de referência)
 
 diagrams/
 └── arquitetura.drawio
+
+docs/
+└── roteiro-pipeline-aws-glue.md   (roteiro de execução ponta a ponta — do
+    bucket até o Power BI, pra replicar o pipeline numa conta AWS Academy
+    Lab própria)
+
+screenshots/
+    (evidências visuais do pipeline rodando no AWS Glue/Athena, referenciadas
+    em `evidencias_aws.md`)
 
 presentation/
 └── TechChallenge.pdf   (relatório executivo — entrega final do desafio)
@@ -91,6 +106,7 @@ utils/
 ├── functions.py    (funções compartilhadas entre as 3 camadas — ver abaixo)
 └── constants.py     (constantes de ordenação e conversão — ver abaixo)
 
+evidencias_aws.md   (evidência de execução do pipeline completo no AWS Academy Lab)
 requirements.txt
 README.md
 .gitignore
@@ -125,10 +141,7 @@ pra ano.
 
 ## Como rodar
 
-<!-- TODO: ambiente de execução (local vs AWS Academy Lab) ainda não
-     definido pelo grupo — atualizar esta seção quando decidido. -->
-
-Por enquanto, os notebooks rodam localmente via Jupyter:
+**Local (desenvolvimento/teste):**
 
 ```bash
 pip install -r requirements.txt
@@ -137,7 +150,27 @@ jupyter lab
 
 Rode as camadas na ordem: `01_bronze` → `02_silver` → `03_gold` (dentro de
 cada uma, qualquer edição pode rodar independente das outras, já que cada
-uma escreve só a sua partição de `ano_pesquisa`) → `04_visualizacao.ipynb`.
+uma escreve só a sua partição de `ano_pesquisa`).
+
+**AWS Glue (execução real, com o dado completo):**
+
+Os scripts equivalentes em `.py`, prontos pra colar direto no Glue Studio,
+estão em `glue_jobs/` — mesma lógica dos notebooks, só com os caminhos
+trocados pra `s3://` e sem dependência de `utils/` local (o cluster do Glue
+não tem checkout do repositório). Ordem de execução por edição: Bronze →
+Silver → Gold.
+
+Passo a passo completo (criação de bucket, IAM role, jobs no Glue Studio,
+catalogação via Crawler, consulta no Athena e conexão no Power BI) em
+[`docs/roteiro-pipeline-aws-glue.md`](docs/roteiro-pipeline-aws-glue.md) —
+útil principalmente pra quem for replicar o pipeline numa conta AWS Academy
+Lab própria, do zero.
+
+## Evidências de execução
+
+Prints de cada etapa do pipeline rodando de verdade no AWS Academy Lab (jobs
+Glue, catalogação, Athena) estão documentados em
+[`evidencias_aws.md`](evidencias_aws.md), com as imagens em `screenshots/`.
 
 ## Licença
 
