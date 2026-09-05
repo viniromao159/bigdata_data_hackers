@@ -12,11 +12,22 @@ Base analisada: pesquisas **State of Data Brazil**, edições **2023, 2024 e
 
 ## Equipe
 
-| Nome | GitHub | Edição da pesquisa |
-|---|---|---|
-| Carlos Henrique Freitas | [@Finnagun](https://github.com/Finnagun) | 2023 |
-| Maycon Suel da Silva Nunes | [@MayconNune](https://github.com/MayconNune) | 2024 |
-| Vinicius Lopes Romão | [@viniromao159](https://github.com/viniromao159) | 2025 |
+| Nome                       | GitHub                                           | Edição da pesquisa |
+| -------------------------- | ------------------------------------------------ | ------------------ |
+| Carlos Henrique Freitas    | [@Finnagun](https://github.com/Finnagun)         | 2023               |
+| Maycon Suel da Silva Nunes | [@MayconNune](https://github.com/MayconNune)     | 2024               |
+| Vinicius Lopes Romão       | [@viniromao159](https://github.com/viniromao159) | 2025               |
+
+## Entregáveis do projeto
+
+| Entregável            | Link                             |
+| --------------------- | -------------------------------- |
+| Documento Executivo   | `presentation/TechChallenge.pdf` |
+| Documentos e Arquivos | [Drive][drive-entregaveis]       |
+| Dashboard             | [Power BI][powerbi-dashboard]    |
+
+[drive-entregaveis]: https://drive.google.com/drive/folders/1fDKt0R2d8Mjop54vf5LYDupLACMaQ-sz?usp=sharing
+[powerbi-dashboard]: https://app.powerbi.com/view?r=eyJrIjoiYTQ5Njc3ZmMtZWMzZS00YzdhLTg1ODEtZDM5NmMyNzdhZjJlIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9&pageName=19cb90bfbb0d3f66f956
 
 ## Arquitetura
 
@@ -45,15 +56,15 @@ Ver `diagrams/arquitetura.drawio` para o diagrama completo.
 
 ## Perguntas de negócio (camada Gold)
 
-| Pasta | Pergunta |
-|---|---|
-| `p1_estrutura_mercado` | Como o mercado de dados está estruturado hoje? |
-| `p2_perfis_valorizados` | Quais perfis são mais valorizados (senioridade, experiência, cargo)? |
-| `p3_diversidade` | Como estão a diversidade e a equidade salarial? |
-| `p4_tecnologias` | Quais tecnologias dominam o mercado? |
-| `p5_ia_generativa` | Como a IA generativa está sendo adotada? |
-| `p6_diferencas_regionais` | Existem diferenças regionais relevantes? |
-| `p7_oportunidades_desafios` | Quais são as oportunidades e desafios reportados? |
+| Pasta                       | Pergunta                                                             |
+| --------------------------- | -------------------------------------------------------------------- |
+| `p1_estrutura_mercado`      | Como o mercado de dados está estruturado hoje?                       |
+| `p2_perfis_valorizados`     | Quais perfis são mais valorizados (senioridade, experiência, cargo)? |
+| `p3_diversidade`            | Como estão a diversidade e a equidade salarial?                      |
+| `p4_tecnologias`            | Quais tecnologias dominam o mercado?                                 |
+| `p5_ia_generativa`          | Como a IA generativa está sendo adotada?                             |
+| `p6_diferencas_regionais`   | Existem diferenças regionais relevantes?                             |
+| `p7_oportunidades_desafios` | Quais são as oportunidades e desafios reportados?                    |
 
 Detalhe de cada consulta em `sql/perguntas.sql`.
 
@@ -87,7 +98,7 @@ sql/
 └── perguntas.sql   (as 7 perguntas de negócio + consultas de referência)
 
 diagrams/
-└── arquitetura.drawio
+└── arquitetura.excalidraw
 
 docs/
 └── roteiro-pipeline-aws-glue.md   (roteiro de execução ponta a ponta — do
@@ -99,6 +110,7 @@ screenshots/
     em `evidencias_aws.md`)
 
 presentation/
+├── TechChallenge.pptx   (relatório executivo em pptx)
 └── TechChallenge.pdf   (relatório executivo — entrega final do desafio)
 
 utils/
