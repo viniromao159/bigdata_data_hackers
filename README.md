@@ -71,6 +71,9 @@ Detalhe de cada consulta em `sql/perguntas.sql`.
 ## Estrutura do repositório
 
 ```
+dashboards/
+└── TechChallenge.pbix  (Dashboard e gráficos utilizado no relatório, feito no Power BI (.pbix))
+
 data/
 ├── raw/                          (CSV original de cada edição)
 ├── bronze/
@@ -98,6 +101,7 @@ sql/
 └── perguntas.sql   (as 7 perguntas de negócio + consultas de referência)
 
 diagrams/
+├── arquitetura.jpeg (Imagem da arquitetura da solução)
 └── arquitetura.excalidraw
 
 docs/
